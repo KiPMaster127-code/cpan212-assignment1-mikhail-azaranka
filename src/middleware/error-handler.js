@@ -6,6 +6,15 @@ export function errorHandler(err, req, res, next) {
     return next(err);
   }
 
+  if (err instanceof HttpError) {
+    return res.status(err.status).json({
+      error: {
+        message: err.message,
+        details: err.details ?? null
+      }
+    });
+  }
+
   // TODO (you): when err is an HttpError, respond with err.status and
   // { error: { message: err.message, details: err.details } }.
 
