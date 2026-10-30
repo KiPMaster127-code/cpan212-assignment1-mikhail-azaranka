@@ -14,9 +14,9 @@ City Weather API will provide you with a weather information in your city follow
 
 3. Install Node.js modules, copy the environment variables to .env and run the project
 
-   npm install
-   cp .env.example .env
-   npm start
+   -npm install
+   -cp .env.example .env
+   -npm start
 
 ## Environment variables
 
